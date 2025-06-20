@@ -1,5 +1,3 @@
-
-
 import ballerina/sql;
 
 # User record type.
