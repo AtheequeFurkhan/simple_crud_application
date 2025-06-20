@@ -37,6 +37,7 @@ public isolated function updateUser(int userId, UserUpdate payload) returns sql:
 // Fetch a single user by their ID.
 public isolated function getUserById(int userId) returns User|sql:Error? {
     // Execute the query and get a stream of user records
+    log:printInfo("Successfully fetching user by ID: ", userId);
     stream<User, sql:Error?> resultStream = dbClient->query(getUserByIdQuery(userId));
     
     // Get the first record from the stream
@@ -56,6 +57,7 @@ public isolated function getUserById(int userId) returns User|sql:Error? {
 // Fetch users by their name (search).
 public isolated function getUsersByName(string name) returns User[]|sql:Error {
     // Execute the query to search users by name.
+     log:printInfo("Successfully fetching users by name: ", name);
     stream<User, sql:Error?> resultStream = dbClient->query(getUsersByNameQuery(name));
     User[] users = [];
     // Collect users from the stream into an array.

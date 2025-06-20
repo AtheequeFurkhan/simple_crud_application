@@ -50,6 +50,11 @@ public type UserCreate record {|
 |};
 
 # User update record type.
+#
+# + name - field description  
+# + email - field description  
+# + address - field description  
+# + mobile - field description
 public type UserUpdate record {|
     # User name
     string? name = ();
@@ -57,6 +62,6 @@ public type UserUpdate record {|
     string? email = ();
     # User address
     string? address = ();
-
+    # User mobile
     string?mobile = ();
 |};
