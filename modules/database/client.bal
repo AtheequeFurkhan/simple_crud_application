@@ -19,6 +19,7 @@ type DatabaseConfig record {|
 # Configurable variable for database connection settings.
 #
 # The configuration is expected to be provided externally via a jar file
+configurable DatabaseConfig dbConfig = ?;
 
 # MySQL database client for executing queries.
 #

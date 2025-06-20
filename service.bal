@@ -15,7 +15,7 @@ service / on new http:Listener(9090) {
         // If there's an error while fetching, return an internal server error.
         if response is error {
             return <http:InternalServerError>{
-                body: "Error occured! while retrieving users"
+                body: "Error while retrieving users"
             };
         }
 
