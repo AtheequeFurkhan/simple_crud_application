@@ -1,12 +1,6 @@
 import ballerina/sql;
 
 # User record type.
-#
-# + id - field description  
-# + name - field description  
-# + email - field description  
-# + address - field description  
-# + mobile - field description
 public type User record {|
     # User ID
     @sql:Column {name: "id"}
@@ -24,17 +18,13 @@ public type User record {|
     @sql:Column {name: "address"}
     string address;
 
+    # User mobile
     @sql:Column {name: "mobile"}
     string mobile;
     
 |};        
 
 # User create record type.
-#
-# + name - field description  
-# + email - field description  
-# + address - field description  
-# + mobile - field description
 public type UserCreate record {|
     # User name
     string name;
@@ -42,17 +32,12 @@ public type UserCreate record {|
     string email;
     # User address
     string address;
-
+    # User mobile
     string mobile;
     
 |};
 
 # User update record type.
-#
-# + name - field description  
-# + email - field description  
-# + address - field description  
-# + mobile - field description
 public type UserUpdate record {|
     # User name
     string? name = ();
